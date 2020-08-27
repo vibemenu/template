@@ -1,0 +1,13 @@
+
+{
+    //These configs are mostly just meta data for the marketplace
+
+    //The email of the owner (on vibemenu) of this microapp. If you used google/facebook login then write the email of your google/facebook email.
+    //Needs to be set in order to see your microapp in your profile
+    "owner": "",
+
+    //Insert the URL of an image that will display for your app on the marketplace
+    "image": "",
+    "description": "",
+
+}

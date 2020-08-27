@@ -3,6 +3,8 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
+import { brotliCompressSync } from 'zlib'
+import gzipPlugin from 'rollup-plugin-gzip'
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -56,6 +58,12 @@ export default {
 			dedupe: ['svelte']
 		}),
 		commonjs(),
+
+        gzipPlugin({
+            customCompression: content =>
+                brotliCompressSync(Buffer.from(content)),
+            fileName: '.br',
+        }),
 
 		// In dev mode, call `npm run start` once
 		// the bundle has been generated
