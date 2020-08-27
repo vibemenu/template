@@ -4,6 +4,7 @@
 
     //The email of the owner (on vibemenu) of this microapp. If you used google/facebook login then write the email of your google/facebook email.
     //Needs to be set in order to see your microapp in your profile
+    //Unsure where to see your email? Go to ...
     "owner": "",
 
     //Insert the URL of an image that will display for your app on the marketplace
